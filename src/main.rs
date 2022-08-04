@@ -40,4 +40,17 @@ fn main() {
     }
 
     println!("The value of z in the outer scope is: {z}");
+
+    // Shadowing is different from marking a variable as mut, because we’ll get a compile-time 
+    // error if we accidentally try to reassign to this variable without using the let keyword. 
+    // By using let, we can perform a few transformations on a value but have the variable be immutable after those 
+    // transformations have been completed.
+    let spaces = "     ";
+    let spaces = spaces.len(); // different type, becuase we are declaring a new var with the let keyword
+
+    // ! this will not compile
+    // let mut spaces = "     ";
+    // spaces = spaces.len(); // assigning different type to mutable string var
+
+
 }
