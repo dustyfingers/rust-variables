@@ -26,6 +26,11 @@ fn main() {
     println!("The value of INCHES_PER_FOOT is: {INCHES_PER_FOOT}");
 
     // * shadowing
+    // Shadowing is different from marking a variable as mut, 
+    // because we’ll get a compile-time error if we accidentally 
+    // try to reassign to this variable without using the let keyword. 
+    // By using let, we can perform a few transformations on a value but have the variable be immutable after 
+    // those transformations have been completed.
     let z = 5;
     let z = z + 1;
 
